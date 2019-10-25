@@ -55,7 +55,8 @@ subject to
       Xsv(i)<=r(i);
     end
 cvx_end
-power1=10*log10(abs(Ssv1(:,1))/max(abs(Ssv1(:,1))));%扩展0-1之间的数值从0-（-inf）可以明显看出谱峰
+%power1=10*log10(abs(Ssv1(:,1))/max(abs(Ssv1(:,1))));%扩展0-1之间的数值从0-（-inf）可以明显看出谱峰
+power1=Xsv;
 plot(search_doa,power1,'r');
 grid minor;
 xlabel('DOA/degree');
